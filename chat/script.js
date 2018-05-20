@@ -5,9 +5,6 @@ window.onload = function(){
     var bool = 0;
     var button_delete_mlp = 0;
     var delete_button = document.getElementsByClassName('del_button');
-    function d(){
-        console.log(delete_button);
-    }
     socket.on('bool',function(data){
         bool++;
     });
@@ -37,4 +34,7 @@ window.onload = function(){
         socket.emit('msg' , text.value);
         text.value = '';
     }
-}
+    delete_button.onclick = function(){
+        console.log('hello');
+    }
+} 
